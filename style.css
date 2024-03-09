@@ -1,0 +1,20 @@
+/* body */
+[data-testid="stAppViewContainer"] > .main {
+  background-image: linear-gradient(
+      to top,
+      rgba(13, 78, 241, 0.6),
+      rgba(34, 32, 32, 0.6)
+    ),
+    url("https://miro.medium.com/v2/resize:fit:1400/0*_PI7U6wTh2ub7nC9.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Header
+[data-testid="stHeader"] {
+  z-index: -99;
+} */
