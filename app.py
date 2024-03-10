@@ -50,14 +50,15 @@ st.set_page_config(
 st.set_option('deprecation.showPyplotGlobalUse', False)
 
 # Sidebar
-menu = st.sidebar.selectbox("Choose an Option", ["Data Analysis", "Question based Graph"])
+menu = st.sidebar.selectbox("Choose an Option 🛠️", ["Data Analysis", "Question based Graph"])
 
 # Main content
 if menu == "Data Analysis":
     logger.info("Data Analysis option selected.")
-    st.subheader("Basic Statistical Analysis of your Data")
+    st.subheader("Basic Statistical Analysis of your Data 📈📉 ")
+
     # File uploader
-    file_uploader = st.file_uploader("Upload your CSV", type="csv")
+    file_uploader = st.file_uploader("Upload your CSV 📝", type="csv")
     if file_uploader is not None:
         try:
             logger.info("CSV file uploaded.")
@@ -106,15 +107,15 @@ if menu == "Data Analysis":
 # Question based Graph
 elif menu == "Question based Graph":
     logger.info("Question based Graph option selected.")
-    st.subheader("Write a Query to Generate Graph")
-    file_uploader = st.file_uploader("Upload your CSV", type="csv")
+    st.subheader("Write a Query to Generate Graph 📊")
+    file_uploader = st.file_uploader("Upload your CSV 📝", type="csv")
     if file_uploader is not None:
         try:
             logger.info("CSV file uploaded.")
             path_to_save = "uploaded_csv.csv"
             with open(path_to_save, "wb") as f:
                 f.write(file_uploader.getvalue())
-            text_area = st.text_area("Query your Data to Generate Graph", height=200)
+            text_area = st.text_area("Query your Data to Generate Graph 🤔", height=200)
             if st.button("Generate Graph"):
                 if len(text_area) > 0:
                     st.info("Your Query: " + text_area)
